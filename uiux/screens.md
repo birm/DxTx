@@ -1,70 +1,45 @@
-Header (all screens except print)
-- quick links
+Core
+- based on 2x3 grid (straightens in mobile)
+- header with two relevant links, home, and log in/out in top
+- footer with basic information
+- visualization space between header and grid
 
-Footer (all screens except print)
-- information on app
+Quick Home - Doctor, Nurse
+- each item in grid has expand button which makes it an overlay
+- reminders 1x1
+- other info 1x1 (datetime, weather, whatever)
+- patients 1x2
+- charts 1x1
+- care mgt summary
+- visualization belongs to care mgt summary
 
-Login Screen
-- username
-- password
-- 2fac (optional)
-- oauth/ alternate login (optinal)
+Quick Home - Administrator (aka the Administator Screen)
+- each item in grid has expand button which makes it an overlay
+- Patients 1x2
+- Activity 1x2
+- users 2x1
+- visualization belongs to activity
 
-Denied Screen
-- Catch denied access
-- MINIMAL Detail
-- Link to quick home
+Patient Intake
+- See form; this is a special non-editable form
 
-Quick Home Screen
-- schedule at a glance with drilldown button
-- important non-medical info (time, date, weather) (optional)
-- summary/visualization of relevant care management
-- patients if applicable with drilldown button
-- my charts with drilldown button
+Form Edit/Create
+- 2x1 info: form name, attributes
+- questions (half grid and greyed out when unselected, full grid when selected)
+- expand area below the questions for question attributes
+- add question button
+- finish button
 
-Patient View Screen
-- patient information
-- related charts
-- next appointment
-- care management data summary/visualization
+Form
+- 2x1 form info
+- questions, each half a grid or a whole grid (attribute of question)
 
-Form Creation and Editing Screen
-- should serve like preview while creating
-- Indicates if this is a new or existing form
-- reinforces the context with which the form will be created
+Care Metric Create Screen
+- 2x1 info box
+- visualization is not drawn, instead a large visualization of result is shown 2x1
+- 2x1 area for picking the metric and calculation
 
-Form Filing Screen
-- show form
-- visual for completion
-
-Patient Intake Form Screen
-- like form, but specialized for this purpose
-- searches for matching potentially duplicate patients
-
-Care Metric Creation/Editing Screen
-- Shows a preview of what the result may look like
-- fields to link to forms and their fields
-- pick an operation
-- Set thresholds (good, warn, bad, urgent)
-- set threshold actions
-
-Care Metric Aggregate Screen
-- shows a visualization of the metric
-- shows related action items
-- shows patients if applicable
-- include print screen
-
-Administration Screen
-- most recently created patients, with add patient button
-- most recently added care metrics, with add button
-- Activity Summary with ability to check in more detail
-- show inactive with options to delete each after review
-
-Activity Screen
-- Tabs for login, creation
-- attempt to highlight anomalous
-
-Deletion Screen
-- show info about what will be deleted
-- show dependencies summary
-- confirm actively (type name)
+Care Metric View Screen
+- 2x1 info box
+- 2x1 visualization
+- 2x1 list of outstanding items
