@@ -1,7 +1,7 @@
-module.controller("Visualization", ['$scope', 'GraphService' function($scope){
-  $scope.VisController = function(userid, token, len) {
-    GraphService(userid, token, len)
-  }
+module.controller("Visualization", ['$scope', 'GraphService'function($scope) {
+    $scope.VisController = function(userid, token, len) {
+        GraphService(userid, token, len)
+    }
 }]);
 
 module.factory('GraphService', function() {
