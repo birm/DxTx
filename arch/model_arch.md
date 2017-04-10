@@ -13,6 +13,8 @@
 * heading
 * content
 * owner
+* satus
+* date
 
 # Patient
 * id (short uuid)
