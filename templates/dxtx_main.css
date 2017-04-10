@@ -2,6 +2,22 @@ body {
     background-color: #FFFDFD;
 }
 
+.expanded_background {
+  position: fixed;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0,0,0);
+  background-color: rgba(0,0,0,0.2);
+}
+
+.expanded {
+  margin: 10% auto;
+  padding: 10px;
+  border: 2px solid #FFF;
+  width: 80%;
+}
 
 .homegrid {
   display: grid;
@@ -14,6 +30,7 @@ body {
   border-radius: 10px;
   padding: 20px;
   background-color: #CBD2D0;
+  overflow: scroll;
 }
 
 .remind {
