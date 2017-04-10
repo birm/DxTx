@@ -1,0 +1,49 @@
+body {
+    background-color: #FFFDFD;
+}
+
+.pure-menu-horizontal{
+  height: 75px;
+}
+
+.pure-menu {
+    box-shadow: 0 3px 3px rgba(0,0,0, 0.50);
+}
+
+
+.grid_container{
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.vis_container{
+  margin: 0 auto;
+  height: 10%;
+  min-height:25px;
+  text-align: center;
+  margin: 10px;
+
+  padding: 0px 15px 0px 15px;
+}
+
+
+.box_item {
+  margin: 10px;
+  height: 35%;
+  min-height: 200px;
+  overflow: auto;
+  padding: 0px 15px 0px 15px;
+  background-color: #CBD2D0;
+}
+
+.boxname>h1{
+    text-align: center;
+}
+
+.patient_table{
+    width:100%;
+}
+
+box_content{
+
+}
