@@ -1,11 +1,23 @@
-module.controller("Patients", ['$scope'], function($scope){
+module.controller("Patients", ['$scope', 'mypatients'], function($scope){
 
 });
 
-module.controller("PatientCreate", ['$scope'], function($scope){
+module.service('mypatients', function() {
+    this.data = 1
+});
+
+module.controller("PatientCreate", ['$scope', 'patientcollision'], function($scope){
 
 });
 
-module.controller("PatientView", ['$scope'], function($scope){
+module.service('patientcollision', function() {
+    this.data = 1
+});
 
+module.controller("PatientView", ['$scope', 'patientview'], function($scope){
+
+});
+
+module.service('patientview', function() {
+    this.data = 1
 });

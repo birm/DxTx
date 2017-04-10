@@ -1,6 +1,12 @@
-module.controller("Visualization", ['$scope', function($scope){
-  $scope.VisController = function (userid, token, len = 30){
-    randomArray = (length) => [...new Array(length)].map(() => Math.random());
-    return randomArray(len)
+module.controller("Visualization", ['$scope', 'graphdata' function($scope){
+  $scope.VisController = function(userid, token, len) {
+    graphdata(userid, token, len)
   }
 }]);
+
+module.factory('graphdata', function() {
+    var graph = {}
+    graph.randomArray = (len) => [...new Array(length)].map(() => Math.random());
+    graph.data = randomArray(len);
+    return graph
+});
