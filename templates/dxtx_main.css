@@ -2,6 +2,10 @@ body {
     background-color: #FFFDFD;
 }
 
+.visualization {
+  height: 20%;
+}
+
 .expanded_background {
   position: fixed;
   z-index: 1;
@@ -14,43 +18,16 @@ body {
 
 .expanded {
   margin: 10% auto;
-  padding: 10px;
   border: 2px solid #FFF;
   width: 80%;
-}
-
-.homegrid {
-  display: grid;
-  grid-gap: 10px;
-  grid-template-columns: 35% 35%;
-  color: #CBD2D0;
 }
 
 .item {
   border-radius: 10px;
   padding: 20px;
+  height: 25%;
+  min-height: 200px;
+  margin: 10px;
+  overflow: auto;
   background-color: #CBD2D0;
-  overflow: scroll;
-}
-
-.remind {
-    grid-column: 1;
-    grid-row: 1;
-}
-.info {
-    grid-column: 2 ;
-    grid-row: 1;
-}
-.patients {
-    grid-column: 1 ;
-    grid-row: 2 / 4 ;
-}
-.charts {
-    grid-column: 2;
-    grid-row: 2;
-}
-
-.care {
-    grid-column: 2;
-    grid-row: 3;
 }
