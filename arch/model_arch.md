@@ -37,6 +37,7 @@
 
 # ChartFill
 * title
+* patient
 * created
 * questions (contain Question items)
 * permissions (contains Permission items)
