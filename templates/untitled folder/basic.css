@@ -1,0 +1,25 @@
+body {
+    background-color: #FFFDFD;
+}
+
+.pure-menu-horizontal{
+  height: 75px;
+}
+
+.pure-menu {
+    box-shadow: 0 3px 3px rgba(0,0,0, 0.50);
+}
+
+body{
+  padding-left: 10%;
+  padding-right: 10%;
+}
+
+.item {
+  padding: 20px;
+  height: 25%;
+  min-height: 200px;
+  margin: 10px;
+  overflow: auto;
+  background-color: #CBD2D0;
+}
