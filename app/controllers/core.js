@@ -1,1 +1,3 @@
-module.controller("Core", ['$scope']);
+module.controller("Core", ['$scope'], function($scope){
+
+});

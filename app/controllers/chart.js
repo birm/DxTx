@@ -7,7 +7,7 @@ module.controller("ChartView", ['$scope', 'chartview'], function($scope){
 });
 
 module.service('chartview', function() {
-    this.chart = {
+    this.data = {
     id: 1,
     title: "basic test intake",
     questions: [
@@ -34,6 +34,9 @@ module.service('chartview', function() {
       }
     ]
   }
+  this.chart = function() {
+    return this.data;
+  }
 });
 
 module.controller("Charts", ['$scope', 'mycharts'], function($scope){
@@ -41,7 +44,7 @@ module.controller("Charts", ['$scope', 'mycharts'], function($scope){
 });
 
 module.service('mycharts', function() {
-      this.charts = [{
+      this.data = [{
       id: 1,
       title: "basic test intake",
       questions: [
@@ -69,4 +72,7 @@ module.service('mycharts', function() {
       ]
     }
   ]
+  this.charts = function(){
+    return this.data;
+  }
 });

@@ -1,9 +1,10 @@
 
 module.controller("Patients", ['$scope', 'mypatients'], function($scope){
+  $scope.patients = mypatients.patients();
 });
 
 module.service('mypatients', function() {
-    this.patients =  [
+    this.patientlist = [
     {
     id: 1,
     name: "Pete Patient",
@@ -20,14 +21,21 @@ module.service('mypatients', function() {
     ]
     }
   ]
+  this.patients = function(){
+    return this.patientlist;
+  }
 });
 
 module.controller("PatientCreate", ['$scope', 'patientcollision'], function($scope){
-
+  $scope.others = patientcollision.same
 });
 
 module.service('patientcollision', function() {
-    this.data = 1
+    this.match = 1
+    this.same = funcion(){
+      return this.match;
+    }
+
 });
 
 module.controller("PatientView", ['$scope', 'patientview'], function($scope){
@@ -49,5 +57,8 @@ module.service('patientview', function() {
         level: "edit"
       }
     ]
+    }
+    this.patientinfo = function(){
+      return this.patient;
     }
 });
