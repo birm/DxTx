@@ -2,11 +2,12 @@ module.controller("ChartCreate", ['$scope'], function($scope){
 
 });
 
-module.controller("ChartView", ['$scope', 'chartview'], function($scope){
+module.controller("ChartView", ['$scope', 'ChartViewService'], function($scope){
+  $scope.chart = ChartViewService.chart();
 
 });
 
-module.service('chartview', function() {
+module.service('ChartViewService', function() {
     this.data = {
     id: 1,
     title: "basic test intake",
@@ -39,11 +40,12 @@ module.service('chartview', function() {
   }
 });
 
-module.controller("Charts", ['$scope', 'mycharts'], function($scope){
+module.controller("Charts", ['$scope', 'ChartService'], function($scope){
+  $scope.charts = mycharts.charts();
 
 });
 
-module.service('mycharts', function() {
+module.service('ChartService', function() {
       this.data = [{
       id: 1,
       title: "basic test intake",

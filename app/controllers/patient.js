@@ -39,7 +39,7 @@ module.service('patientcollision', function() {
 });
 
 module.controller("PatientView", ['$scope', 'patientview'], function($scope){
-
+  $scope.patient = patientview.patientinfo();
 });
 
 module.service('patientview', function() {

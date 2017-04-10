@@ -1,10 +1,10 @@
-module.controller("Visualization", ['$scope', 'graphdata' function($scope){
+module.controller("Visualization", ['$scope', 'GraphService' function($scope){
   $scope.VisController = function(userid, token, len) {
-    graphdata(userid, token, len)
+    GraphService(userid, token, len)
   }
 }]);
 
-module.factory('graphdata', function() {
+module.factory('GraphService', function() {
     var graph = {}
     graph.randomArray = (len) => [...new Array(length)].map(() => Math.random());
     graph.data = randomArray(len);
