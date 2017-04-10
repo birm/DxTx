@@ -1,5 +1,5 @@
-ChartCreate
+module.controller("ChartCreate", ['$scope']);
 
-ChartView
+module.controller("ChartView", ['$scope']);
 
-Charts
+module.controller("Charts", ['$scope']);

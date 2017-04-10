@@ -1,1 +1,1 @@
-Login
+module.controller("Login", ['$scope']);

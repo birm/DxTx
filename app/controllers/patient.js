@@ -1,5 +1,5 @@
-Patients
+module.controller("Patients", ['$scope']);
 
-PatientCreate
+module.controller("PatientCreate", ['$scope']);
 
-PatientView
+module.controller("PatientView", ['$scope']);

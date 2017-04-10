@@ -1,1 +1,1 @@
-Core
+module.controller("Core", ['$scope']);
