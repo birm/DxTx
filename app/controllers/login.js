@@ -3,5 +3,6 @@ module.controller("Login", ['$scope', 'logincheck'], function($scope){
 });
 
 module.service('logincheck', function() {
-    this.data = 1
+    this.user = 1
+    // add a cookie
 });
