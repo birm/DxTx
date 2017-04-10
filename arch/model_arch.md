@@ -13,7 +13,6 @@
 * heading
 * content
 * owner
-* permissions (contains Permission items)
 
 # Patient
 * id (short uuid)
