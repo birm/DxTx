@@ -1,6 +1,6 @@
 module.controller("Visualization", ['$scope', function($scope){
-  function GraphService(userid, token, len = 30){
-    randomArray = (length, max) => [...new Array(length)].map(() => Math.random());
-    $scope.graphdata = randomArray
+  $scope.VisController = function (userid, token, len = 30){
+    randomArray = (length) => [...new Array(length)].map(() => Math.random());
+    return randomArray(len)
   }
 }]);
