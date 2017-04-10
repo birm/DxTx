@@ -1,5 +1,5 @@
 var model = {};
-model.users = {users:
+model.users =
 [
   {
     id: 1,
@@ -46,10 +46,10 @@ model.users = {users:
       }
     ]
   }
-]};
+];
 
 
-model.reminders = {reminder:[
+model.reminders = [
   {
   id: 1,
   heading: "Add Physicians",
@@ -62,9 +62,9 @@ model.reminders = {reminder:[
   content: "Need to add the Patients to the app",
   owner: 2
   }
-]}
+]
 
-model.patients = {patient:[
+model.patients = [
   {
   id: 1,
   name: "Pete Patient",
@@ -80,10 +80,11 @@ model.patients = {patient:[
     }
   ]
   }
-]}
+]
 
-model.charts = {chart:[
+model.charts = [
   {
+    id: 1,
     title: "basic test intake",
     questions: [
       {
@@ -109,10 +110,11 @@ model.charts = {chart:[
       }
     ]
   }
-]}
+]
 
-model.chartfill = {chartfill:[
+model.chartfill = [
   {
+    id: 1,
     title: "Bob's intake",
     patient: 1,
     questions: [
@@ -140,4 +142,18 @@ model.chartfill = {chartfill:[
     ]
   }
 ]
+
+
+// how to search by id
+function findchart(n){
+  return model.charts.find(x => x.id === n)
+}
+
+// how to return only with permissions
+function allows(permissions, user){
+  // given a permissions array, return if the user is present
+  return length(permissions.find(x => x.user === n)) > 0;
+}
+function allowedchart(n){
+  return model.chart.find(x => allows(x.permissions, n))
 }
