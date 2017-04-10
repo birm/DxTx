@@ -152,7 +152,12 @@ function findchart(n){
 // how to return only with permissions
 function allows(permissions, user){
   // given a permissions array, return if the user is present
-  return length(permissions.find(x => x.user === n)) > 0;
+  if permissions{
+    return length(permissions.find(x => x.user === n)) > 0;
+  }
+  else{
+    return 0
+  }
 }
 function allowedchart(n){
   return model.chart.find(x => allows(x.permissions, n))
