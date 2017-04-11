@@ -60,6 +60,14 @@ body {
 	background: #ddd;
 	}
 
+.form-q:nth-of-type(odd) {
+	background: #eee;
+	}
+
+.form-q:nth-of-type(even) {
+	background: #ddd;
+	}
+
 td{
     width:50%
 }
