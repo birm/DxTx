@@ -22,13 +22,17 @@ body {
   min-height:25px;
   text-align: center;
   margin: 10px;
-
   padding: 0px 15px 0px 15px;
 }
 
+.boxname{
+    background-color: #DF2935;
+    margin: 0px 10px 0px 10px;
+    padding: 0px 15px 0px 15px;
+}
 
-.box_item {
-  margin: 10px;
+.box_content {
+  margin: 0px 10px 20px 10px;
   height: 35%;
   min-height: 200px;
   overflow: auto;
@@ -36,14 +40,23 @@ body {
   background-color: #CBD2D0;
 }
 
-.boxname>h1{
+.boxname{
     text-align: center;
+    font-size: 2em
 }
 
-.patient_table{
-    width:100%;
+.card-item{
+    margin: 5px 0px 5px 0px;
 }
 
-box_content{
+.card-item:nth-of-type(odd) {
+	background: #eee;
+	}
 
+.card-item:nth-of-type(even) {
+	background: #ddd;
+	}
+
+td{
+    width:50%
 }
