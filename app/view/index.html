@@ -18,10 +18,10 @@
 
         <div class="grid_container">
         <div class="pure-g">
-          <div class="item pure-u-1" id="vis_container">
+          <div class="item pure-u-1" id="vis_container" ng-controller="Visualization">
           </div>
             <div class="item pure-u-1 pure-u-lg-1-2">
-                <div class="box_item">
+                <div class="box_item" ng-controller="Reminder">
                     <div class="boxname">My Reminders</div>
                     <div class="box_content">
                         <table width="100%" class="card-item pure-table pure-table-bordered">
@@ -155,7 +155,7 @@
                 </div>
             </div>
             <div class="item pure-u-1 pure-u-lg-1-2">
-                <div class="box_item">
+                <div class="box_item" ng-controller="Patients">
                     <div class="boxname">My Patients</div>
                     <div class="box_content">
                         <table width="100%" class="card-item pure-table pure-table-bordered">
@@ -258,7 +258,7 @@
                 </div>
             </div>
             <div class="item pure-u-1 pure-u-lg-1-2">
-                <div class="box_item">
+                <div class="box_item" ng-controller="Charts">
                     <div class="boxname">My Charts</div>
                     <div class="box_content">
                         <table width="100%" class="card-item pure-table pure-table-bordered">
