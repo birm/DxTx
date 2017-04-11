@@ -2,7 +2,7 @@
 <html>
 
 <head>
-  <script data-require="d3@3.5.3" data-semver="3.5.3" src="//cdnjs.cloudflare.com/ajax/libs/d3/3.5.3/d3.js"></script>
+  <script data-require="d3@3.5.3" data-semver="3.5.3" src="http://cdnjs.cloudflare.com/ajax/libs/d3/3.5.3/d3.js"></script>
   <style>
     body {
       font: 10px sans-serif;
@@ -29,12 +29,12 @@
 
 <body>
   <script>
-    var myData = "date	New York	San Francisco	Austin\n\
-20111001	63.4	62.7	72.2\n\
-20111002	58.0	59.9	67.7\n\
-20111003	53.3	59.1	69.4\n\
-20111004	55.7	58.8	68.0\n\
-20111005	64.2	58.7	72.4\n\
+    var myData = "date	Punctuality	Kindness	Flu Rate\n\
+20170401	63.4	62.7	72.2\n\
+20170402	58.0	59.9	67.7\n\
+20170403	53.3	59.1	69.4\n\
+20170404	55.7	58.8	68.0\n\
+20170405	64.2	58.7	72.4\n\
 ";
 
     var margin = {
@@ -58,11 +58,13 @@
 
     var xAxis = d3.svg.axis()
       .scale(x)
-      .orient("bottom");
+      .orient("bottom")
+      .ticks(3);
 
     var yAxis = d3.svg.axis()
       .scale(y)
-      .orient("left");
+      .orient("left")
+      .ticks(0);
 
     var line = d3.svg.line()
       .interpolate("basis")
@@ -118,31 +120,7 @@
       })
     ]);
 
-    var legend = svg.selectAll('g')
-      .data(cities)
-      .enter()
-      .append('g')
-      .attr('class', 'legend');
 
-    legend.append('rect')
-      .attr('x', width - 20)
-      .attr('y', function(d, i) {
-        return i * 20;
-      })
-      .attr('width', 10)
-      .attr('height', 10)
-      .style('fill', function(d) {
-        return color(d.name);
-      });
-
-    legend.append('text')
-      .attr('x', width - 8)
-      .attr('y', function(d, i) {
-        return (i * 20) + 9;
-      })
-      .text(function(d) {
-        return d.name;
-      });
 
     svg.append("g")
       .attr("class", "x axis")
@@ -154,10 +132,9 @@
       .call(yAxis)
       .append("text")
       .attr("transform", "rotate(-90)")
-      .attr("y", 6)
+      .attr("y", 2)
       .attr("dy", ".71em")
-      .style("text-anchor", "end")
-      .text("Temperature (ºF)");
+      .style("text-anchor", "end");;
 
     var city = svg.selectAll(".city")
       .data(cities)
