@@ -10,11 +10,10 @@
 
 # Reminder
 * id (short uuid)
-* heading
-* content
+* text
 * owner
-* satus
-* date
+* status
+* date due
 
 # Patient
 * id (short uuid)
