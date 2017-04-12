@@ -53,13 +53,15 @@ model.reminders = [
   {
   id: 1,
   heading: "Add Physicians",
-  content: "Need to add the Physicians to the app",
+  text: "Need to add the Physicians to the app",
+  due: "10/10/2017",
   owner: 1
   },
   {
   id: 2,
   heading: "Add Patients",
-  content: "Need to add the Patients to the app",
+  text: "Need to add the Patients to the app",
+  due: "10/1/2017",
   owner: 2
   }
 ]
