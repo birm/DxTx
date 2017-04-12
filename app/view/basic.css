@@ -29,9 +29,21 @@ body {
 }
 
 .box_search{
-    width:96.75%;
-    margin: 0px 10px 0px 10px;
-    font-size: 2em;
+    outline:solid thin;
+    margin-bottom:10px;
+}
+
+input {
+  box-sizing: border-box;
+  width: 100%
+}
+
+.modal_box_content {
+    margin: 0px 10px 20px 10px;
+    overflow: auto;
+    height: 70%;
+    padding: 0px 15px 0px 15px;
+    background-color: #CBD2D0;
 }
 
 .box_content {
@@ -96,4 +108,30 @@ body {
     width: 5px;
     height: auto;
     display: inline-block;
+}
+
+.logo{
+  margin-left: auto;
+	margin-right: auto;
+	display: block;
+  padding-top:5px;
+}
+
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+.modal_content {
+    margin: 5% auto; /* 15% from the top and centered */
+    padding: 20px;
+    width: 90%; /* Could be more or less, depending on screen size */
 }
