@@ -5,6 +5,7 @@
         <script src="../dxtx_controllers.js"></script>
         <script src="../dxtx_services.js"></script>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href=" https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
         <link rel="stylesheet" href="basic.css">
         <link rel="stylesheet" href="https://unpkg.com/purecss@0.6.2/build/pure-min.css" integrity="sha384-" crossorigin="anonymous">
         <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.6.0/grids-responsive-min.css">
@@ -12,9 +13,10 @@
         <div class="pure-menu pure-menu-horizontal">
             <a href="#" class="pure-menu-heading">
                 <img class="logo" src="dxtx.png" alt="DxTx" />
-                </div></a>
-            <ul class="pure-menu-list">
-            </ul>
+              </a>
+              <div class="right_buttons menu_buttons">
+                <i class="fa fa-sign-in" aria-hidden="true"></i>
+              </div>
         </div>
     </head>
     <body>
@@ -25,8 +27,17 @@
           </div>
             <div class="item pure-u-1 pure-u-lg-1-2">
                 <div class="box_item" ng-controller="Reminder">
-                    <div class="boxname">My Reminders</div>
+                    <div class="boxname">
+                      My Reminders
+                      <div class="right_buttons">
+                        <i onclick="document.getElementById('alert_search').setAttribute('style', 'width:100%');" class="fa fa-search" aria-hidden="true">
+                        </i>
+                        <div class="spacer"></div>
+                        <i onclick="alert('expand');" class="fa fa-expand" aria-hidden="true"></i>
+                      </div>
+                    </div>
                     <div class="box_content">
+                      <input id="alert_search" style="display:none;" type="text" ng-model="search"></input>
                         <table width="100%" class="card-item pure-table pure-table-bordered">
                             <tbody>
                                 <tr>
@@ -128,8 +139,18 @@
             </div>
             <div class="item pure-u-1 pure-u-lg-1-2">
                 <div class="box_item">
-                    <div class="boxname">My Metrics</div>
+                    <div class="boxname">
+                      My Metrics
+                      <div class="right_buttons">
+                        <i onclick="document.getElementById('metric_search').setAttribute('style', 'width:100%');"
+                        class="fa fa-search" aria-hidden="true">
+                        </i>
+                        <div class="spacer"></div>
+                        <i class="fa fa-expand" aria-hidden="true"></i>
+                      </div>
+                    </div>
                     <div class="box_content">
+                      <input id="metric_search" style="display:none;" type="text" ng-model="search"></input>
                         <table width="100%" class="card-item pure-table pure-table-bordered">
                             <tbody>
                                 <tr>
@@ -159,8 +180,18 @@
             </div>
             <div class="item pure-u-1 pure-u-lg-1-2">
                 <div class="box_item" ng-controller="Patients">
-                    <div class="boxname">My Patients</div>
+                    <div class="boxname">
+                      My Patients
+                      <div class="right_buttons">
+                        <i onclick="document.getElementById('patient_search').setAttribute('style', 'width:100%');"
+ class="fa fa-search" aria-hidden="true">
+                        </i>
+                        <div class="spacer"></div>
+                        <i class="fa fa-expand" aria-hidden="true"></i>
+                      </div>
+                    </div>
                     <div class="box_content">
+                      <input id="patient_search" style="display:none;" type="text" ng-model="search"></input>
                         <table width="100%" class="card-item pure-table pure-table-bordered">
                             <tbody>
                                 <tr>
@@ -262,8 +293,18 @@
             </div>
             <div class="item pure-u-1 pure-u-lg-1-2">
                 <div class="box_item" ng-controller="Charts">
-                    <div class="boxname">My Charts</div>
+                    <div class="boxname">
+                      My Charts
+                      <div class="right_buttons">
+                        <i onclick="document.getElementById('chart_search').setAttribute('style', 'width:100%');"
+                        class="fa fa-search" aria-hidden="true">
+                        </i>
+                        <div class="spacer"></div>
+                        <i class="fa fa-expand" aria-hidden="true"></i>
+                      </div>
+                    </div>
                     <div class="box_content">
+                      <input id="chart_search" style="display:none;" type="text" ng-model="search"></input>
                         <table width="100%" class="card-item pure-table pure-table-bordered">
                             <tbody>
                                 <tr>

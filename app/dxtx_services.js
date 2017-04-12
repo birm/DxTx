@@ -24,13 +24,10 @@ module.service('ChartViewService', function() {
       }
     ]
   };
-  this.chart_search = function(search){
-    return this.data;
-  }
 
   this.chart = function() {
     return this.data;
-  }
+  };
 });
 
 module.service('ChartService', function() {
@@ -59,6 +56,11 @@ module.service('ChartService', function() {
       }
     ]
   }]
+
+  this.chart_search = function(search){
+    return this.data;
+  };
+
   this.charts = function() {
     return this.data;
   }
