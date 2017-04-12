@@ -13,7 +13,7 @@ module.controller("ChartView", ['$scope', 'ChartViewService', function($scope, C
 
 module.controller("Charts", ['$scope', 'ChartService', function($scope, ChartService) {
   $scope.charts = ChartService.charts();
-  $scope.chart_search = ChartService.chart_search(search);
+  $scope.chart_search = ChartService.chart_search($scope.search);
 
 }]);
 
@@ -41,7 +41,7 @@ module.controller("Login", ['$scope', 'LoginService'], function($scope, LoginSer
 
 module.controller("Patients", ['$scope', 'mypatients', function($scope, mypatients) {
   $scope.patients = mypatients.patients();
-  $scope.patient_search = mypatients.patient_search(s_name, s_dob);
+  $scope.patient_search = mypatients.patient_search($scope.s_name, $scope.s_dob);
 }]);
 
 

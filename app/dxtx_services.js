@@ -24,10 +24,10 @@ module.service('ChartViewService', function() {
       }
     ]
   };
-  this.chart_search(search){
+  this.chart_search = function(search){
     return this.data;
   }
-  
+
   this.chart = function() {
     return this.data;
   }
@@ -118,12 +118,12 @@ module.service('mypatients', function() {
         user: 1,
         level: "edit"
       }
-    ];
-  this.patient_search(name, dob){
+    ]
+  }];
+  this.patient_search = function(name, dob){
     return this.patientlist;
   }
 
-}];
   this.patients = function() {
     return this.patientlist;
   }
