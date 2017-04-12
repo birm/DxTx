@@ -1,20 +1,15 @@
-// Get the modal
-var modal = document.getElementById('reminder_modal');
-
-// Get the button that opens the modal
-var btn = document.getElementById("reminder_exp");
-
-// Get the <span> element that closes the modal
-var span = document.getElementsByClassName("close")[0];
-
-// When the user clicks on the button, open the modal
-btn.onclick = function() {
-    modal.style.display = "block";
+document.getElementById("reminder_exp").onclick = function() {
+    document.getElementById('reminder_modal').style.display = "block";
 }
 
-// When the user clicks anywhere outside of the modal, close it
+document.getElementsByClassName("close")[0].onclick = function() {
+    document.getElementById("reminder_modal").style.display = "none";
+}
+
 window.onclick = function(event) {
-    if (event.target == modal) {
-        modal.style.display = "none";
+    if (event.target == document.getElementById('reminder_modal')) {
+        document.getElementById('reminder_modal').style.display = "none";
     }
 }
+
+document.getElementById('reminder_modal').style.display = "none";
