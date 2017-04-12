@@ -7,9 +7,24 @@ module.controller("Reminder", ['$scope'], function($scope) {
 });
 
 module.service('ReminderService', function() {
-    this.data = [["Add Physicians", "10/1/2017"]]
-    this.weather = function() {
-        return this.data
+    this.reminders = [
+      {
+      id: 1,
+      heading: "Add Physicians",
+      text: "Need to add the Physicians to the app",
+      due: "10/10/2017",
+      owner: 1
+      },
+      {
+      id: 2,
+      heading: "Add Patients",
+      text: "Need to add the Patients to the app",
+      due: "10/1/2017",
+      owner: 2
+      }
+    ]
+    this.reminders = function() {
+        return this.reminders
     }
     this.
 });
