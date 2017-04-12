@@ -28,12 +28,10 @@
           <div class="boxname">
             My Reminders
             <div class="right_buttons">
-              <i onclick="document.getElementById('alert_search').setAttribute('style', '');" class="fa fa-search" aria-hidden="true">
-              </i>
               <div class="spacer"></div>
               <i class="fa fa-compress close" aria-hidden="true"></i>
             </div>
-            <input placeholder="Search" class="box_search" id="alert_search" style="display:none;" type="text" ng-model="search"></input>
+            <input placeholder="Search" class="box_search" id="alert_search" type="text" ng-model="search"></input>
           </div>
           <div class="modal_box_content">
             <table width="100%" class="card-item pure-table pure-table-bordered">
@@ -137,18 +135,15 @@
       </div>
 
 
-
       <div id="reminder_box" class="item pure-u-1 pure-u-lg-1-2">
         <div class="box_item" ng-controller="Reminder">
           <div class="boxname">
             My Reminders
             <div class="right_buttons">
-              <i onclick="document.getElementById('alert_search').setAttribute('style', '');" class="fa fa-search" aria-hidden="true">
-              </i>
               <div class="spacer"></div>
               <i id="reminder_exp" class="fa fa-expand" aria-hidden="true"></i>
             </div>
-            <input placeholder="Search" class="box_search" id="alert_search" style="display:none;" type="text" ng-model="search"></input>
+            <input placeholder="Search" class="box_search" id="alert_search" type="text" ng-model="search"></input>
           </div>
           <div class="box_content">
             <table width="100%" class="card-item pure-table pure-table-bordered">
@@ -250,18 +245,57 @@
           </div>
         </div>
       </div>
+
+
+      <div id="metrics_modal" class="item pure-u-1 modal">
+        <div class="modal_content">
+          <div class="boxname">
+            My Metrics
+            <div class="right_buttons">
+              <div class="spacer"></div>
+              <i class="fa fa-compress close" aria-hidden="true"></i>
+            </div>
+            <input placeholder="Search" class="box_search" id="metric_search" type="text" ng-model="search"></input>
+          </div>
+          <div class="modal_box_content">
+            <table width="100%" class="card-item pure-table pure-table-bordered">
+              <tbody>
+                <tr>
+                  <td>Punctuality</td>
+                  <td>75% (+0.5%)</td>
+                </tr>
+              </tbody>
+            </table>
+            <table width="100%" class="card-item pure-table pure-table-bordered">
+              <tbody>
+                <tr>
+                  <td>Kindness</td>
+                  <td>85% (+5.5%)</td>
+                </tr>
+              </tbody>
+            </table>
+            <table width="100%" class="card-item pure-table pure-table-bordered">
+              <tbody>
+                <tr>
+                  <td>Flu Rate</td>
+                  <td>5% (-5.1%)</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+
+
       <div class="item pure-u-1 pure-u-lg-1-2">
         <div class="box_item">
           <div class="boxname">
             My Metrics
             <div class="right_buttons">
-              <i onclick="document.getElementById('metric_search').setAttribute('style', '');"
-                class="fa fa-search" aria-hidden="true">
-              </i>
               <div class="spacer"></div>
-              <i class="fa fa-expand" aria-hidden="true"></i>
+              <i id="metrics_exp" class="fa fa-expand" aria-hidden="true"></i>
             </div>
-            <input placeholder="Search" class="box_search" id="metric_search" style="display:none;" type="text" ng-model="search"></input>
+            <input placeholder="Search" class="box_search" id="metric_search" type="text" ng-model="search"></input>
           </div>
           <div class="box_content">
             <table width="100%" class="card-item pure-table pure-table-bordered">
@@ -291,18 +325,17 @@
           </div>
         </div>
       </div>
+
+
       <div class="item pure-u-1 pure-u-lg-1-2">
         <div class="box_item" ng-controller="Patients">
           <div class="boxname">
             My Patients
             <div class="right_buttons">
-              <i onclick="document.getElementById('patient_search').setAttribute('style', '');"
-                class="fa fa-search" aria-hidden="true">
-              </i>
               <div class="spacer"></div>
-              <i class="fa fa-expand" aria-hidden="true"></i>
+              <i id="patients_exp" class="fa fa-expand" aria-hidden="true"></i>
             </div>
-            <input placeholder="Search" class="box_search" id="patient_search" style="display:none;" type="text" ng-model="search"></input>
+            <input placeholder="Search" class="box_search" id="patient_search" type="text" ng-model="search"></input>
           </div>
           <div class="box_content">
             <table width="100%" class="card-item pure-table pure-table-bordered">
@@ -404,18 +437,172 @@
           </div>
         </div>
       </div>
+
+
+      <div id="patients_modal" class="item pure-u-1 modal">
+        <div class="modal_content" ng-controller="Patients">
+          <div class="boxname">
+            My Patients
+            <div class="right_buttons">
+              <div class="spacer"></div>
+              <i class="fa fa-compress close" aria-hidden="true"></i>
+            </div>
+            <input placeholder="Search" class="box_search" id="patient_search" type="text" ng-model="search"></input>
+          </div>
+          <div class="box_content">
+            <table width="100%" class="card-item pure-table pure-table-bordered">
+              <tbody>
+                <tr>
+                  <td>Alice Alices</td>
+                  <td>Due: 10/10/2017</td>
+                </tr>
+              </tbody>
+            </table>
+            <table width="100%" class="card-item pure-table pure-table-bordered">
+              <tbody>
+                <tr>
+                  <td>Bob Bobs</td>
+                  <td>Due: 10/10/2017</td>
+                </tr>
+              </tbody>
+            </table>
+            <table width="100%" class="card-item pure-table pure-table-bordered">
+              <tbody>
+                <tr>
+                  <td>Cat Person</td>
+                  <td>Due: 10/10/2017</td>
+                </tr>
+              </tbody>
+            </table>
+            <table width="100%" class="card-item pure-table pure-table-bordered">
+              <tbody>
+                <tr>
+                  <td>Alice Alices</td>
+                  <td>Due: 10/10/2017</td>
+                </tr>
+              </tbody>
+            </table>
+            <table width="100%" class="card-item pure-table pure-table-bordered">
+              <tbody>
+                <tr>
+                  <td>Bob Bobs</td>
+                  <td>Due: 10/10/2017</td>
+                </tr>
+              </tbody>
+            </table>
+            <table width="100%" class="card-item pure-table pure-table-bordered">
+              <tbody>
+                <tr>
+                  <td>Cat Person</td>
+                  <td>Due: 10/10/2017</td>
+                </tr>
+              </tbody>
+            </table>
+            <table width="100%" class="card-item pure-table pure-table-bordered">
+              <tbody>
+                <tr>
+                  <td>Alice Alices</td>
+                  <td>Due: 10/10/2017</td>
+                </tr>
+              </tbody>
+            </table>
+            <table width="100%" class="card-item pure-table pure-table-bordered">
+              <tbody>
+                <tr>
+                  <td>Bob Bobs</td>
+                  <td>Due: 10/10/2017</td>
+                </tr>
+              </tbody>
+            </table>
+            <table width="100%" class="card-item pure-table pure-table-bordered">
+              <tbody>
+                <tr>
+                  <td>Cat Person</td>
+                  <td>Due: 10/10/2017</td>
+                </tr>
+              </tbody>
+            </table>
+            <table width="100%" class="card-item pure-table pure-table-bordered">
+              <tbody>
+                <tr>
+                  <td>Alice Alices</td>
+                  <td>Due: 10/10/2017</td>
+                </tr>
+              </tbody>
+            </table>
+            <table width="100%" class="card-item pure-table pure-table-bordered">
+              <tbody>
+                <tr>
+                  <td>Bob Bobs</td>
+                  <td>Due: 10/10/2017</td>
+                </tr>
+              </tbody>
+            </table>
+            <table width="100%" class="card-item pure-table pure-table-bordered">
+              <tbody>
+                <tr>
+                  <td>Cat Person</td>
+                  <td>Due: 10/10/2017</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+
+
       <div class="item pure-u-1 pure-u-lg-1-2">
         <div class="box_item" ng-controller="Charts">
           <div class="boxname">
             My Charts
             <div class="right_buttons">
-              <i onclick="document.getElementById('chart_search').setAttribute('style', '');"
-                class="fa fa-search" aria-hidden="true">
-              </i>
               <div class="spacer"></div>
-              <i class="fa fa-expand" aria-hidden="true"></i>
+              <i id="charts_exp" class="fa fa-expand" aria-hidden="true"></i>
             </div>
-            <input placeholder="Search" class="box_search" id="chart_search" style="display:none;" type="text" ng-model="search"></input>
+            <input placeholder="Search" class="box_search" id="chart_search" type="text" ng-model="search"></input>
+          </div>
+            </div>
+          <div class="box_content">
+            <table width="100%" class="card-item pure-table pure-table-bordered">
+              <tbody>
+                <tr>
+                  <td>Intake</td>
+                  <td>Modified: 04/04/2017</td>
+                </tr>
+              </tbody>
+            </table>
+            <table width="100%" class="card-item pure-table pure-table-bordered">
+              <tbody>
+                <tr>
+                  <td>Diagnosis</td>
+                  <td>Modified: 04/04/2017</td>
+                </tr>
+              </tbody>
+            </table>
+            <table width="100%" class="card-item pure-table pure-table-bordered">
+              <tbody>
+                <tr>
+                  <td>Feedback</td>
+                  <td>Modified: 04/04/2017</td>
+                </tr>
+              </tbody>
+            </table>
+            </tr>
+            </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+
+      <div id="charts_modal" class="item pure-u-1 modal">
+        <div class="modal_content" ng-controller="Charts">
+          <div class="boxname">
+            My Charts
+            <div class="right_buttons">
+              <div class="spacer"></div>
+              <i class="fa fa-compress close" aria-hidden="true"></i>
+            </div>
+            <input placeholder="Search" class="box_search" id="chart_search" type="text" ng-model="search"></input>
           </div>
             </div>
           <div class="box_content">
