@@ -1,14 +1,3 @@
-var module = angular.module("dxtx", []);
-
-module.controller("ChartCreate", ['$scope'], function($scope) {
-
-});
-
-module.controller("ChartView", ['$scope', 'ChartViewService'], function($scope) {
-  $scope.chart = ChartViewService.chart();
-
-});
-
 module.service('ChartViewService', function() {
   this.data = {
     id: 1,
@@ -38,11 +27,6 @@ module.service('ChartViewService', function() {
   this.chart = function() {
     return this.data;
   }
-});
-
-module.controller("Charts", ['$scope', 'ChartService'], function($scope) {
-  $scope.charts = mycharts.charts();
-
 });
 
 module.service('ChartService', function() {
@@ -76,14 +60,6 @@ module.service('ChartService', function() {
   }
 });
 
-module.controller("Home", ['$scope'], function($scope) {
-
-});
-
-module.controller("Reminder", ['$scope'], function($scope) {
-
-});
-
 module.service('ReminderService', function() {
   this.reminders = [{
       id: 1,
@@ -105,13 +81,6 @@ module.service('ReminderService', function() {
   }
 });
 
-module.controller("ExpandItem", ['$scope'], function($scope) {
-
-});
-
-module.controller("Info", ['$scope', 'WeatherService'], function($scope) {
-  $scope.weather = WeatherService.weather()
-});
 
 module.service('WeatherService', function() {
   this.data = "73 degrees and sunny"
@@ -120,10 +89,6 @@ module.service('WeatherService', function() {
   }
 });
 
-module.controller("Login", ['$scope', 'LoginService'], function($scope) {
-  $scope.uid = LoginService.login();
-  $scope.token = LoginService.token();
-});
 
 module.service('LoginService', function() {
   this.user = 1
@@ -135,9 +100,6 @@ module.service('LoginService', function() {
   }
 });
 
-module.controller("Patients", ['$scope', 'mypatients'], function($scope) {
-  $scope.patients = mypatients.patients();
-});
 
 module.service('mypatients', function() {
   this.patientlist = [{
@@ -153,15 +115,12 @@ module.service('mypatients', function() {
         level: "edit"
       }
     ]
-  }]
+}];
   this.patients = function() {
     return this.patientlist;
   }
 });
 
-module.controller("PatientCreate", ['$scope', 'patientcollision'], function($scope) {
-  $scope.others = patientcollision.same
-});
 
 module.service('patientcollision', function() {
   this.match = 1;
@@ -171,9 +130,6 @@ module.service('patientcollision', function() {
 
 });
 
-module.controller("PatientView", ['$scope', 'patientview'], function($scope) {
-  $scope.patient = patientview.patientinfo();
-});
 
 module.service('patientview', function() {
   this.patient = {
@@ -195,15 +151,10 @@ module.service('patientview', function() {
   }
 });
 
-module.controller("Visualization", ['$scope', 'GraphService'], function($scope) {
-  $scope.VisController = function(userid, token, len) {
-    GraphService(userid, token, len)
-  }
-});
 
 module.factory('GraphService', function() {
   var graph = {}
-  graph.randomArray = (len) => [...new Array(length)].map(() => Math.random());
-  graph.data = randomArray(len);
+  graph.randomArray = (len) => [...new Array(len)].map(() => Math.random());
+  graph.data = graph.randomArray(10);
   return graph
 });
