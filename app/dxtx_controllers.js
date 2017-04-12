@@ -13,39 +13,9 @@ module.controller("ChartView", ['$scope', 'ChartViewService', function($scope, C
 
 module.controller("Charts", ['$scope', 'ChartService', function($scope, ChartService) {
   $scope.charts = ChartService.charts();
+  $scope.chart_search = ChartService.chart_search(search);
 
 }]);
-
-module.service('ChartService', function() {
-  this.data = [{
-    id: 1,
-    title: "basic test intake",
-    questions: [{
-        text: "How do you feel today?",
-        type: "paragraph",
-        answer: "Describe your body feel in general terms."
-      },
-      {
-        text: "Why did you come in?",
-        type: "paragraph",
-        validation: ["nonempty"],
-        answer: "Describe your motivation for coming in"
-      }
-    ],
-    permissions: [{
-        user: 2,
-        level: "owner"
-      },
-      {
-        user: 1,
-        level: "edit"
-      }
-    ]
-  }]
-  this.charts = function() {
-    return this.data;
-  }
-});
 
 module.controller("Home", ['$scope', function($scope) {
     []
@@ -63,13 +33,6 @@ module.controller("Info", ['$scope', 'WeatherService', function($scope, WeatherS
   $scope.weather = WeatherService.weather()
 }]);
 
-module.service('WeatherService', function() {
-  this.data = "73 degrees and sunny"
-  this.weather = function() {
-    return this.data;
-  }
-});
-
 module.controller("Login", ['$scope', 'LoginService'], function($scope, LoginService) {
   $scope.uid = LoginService.login();
   $scope.token = LoginService.token();
@@ -78,6 +41,7 @@ module.controller("Login", ['$scope', 'LoginService'], function($scope, LoginSer
 
 module.controller("Patients", ['$scope', 'mypatients', function($scope, mypatients) {
   $scope.patients = mypatients.patients();
+  $scope.patient_search = mypatients.patient_search(s_name, s_dob);
 }]);
 
 
