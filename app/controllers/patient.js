@@ -28,7 +28,7 @@ module.controller("PatientCreate", ['$scope', 'patientcollision'], function($sco
 
 module.service('patientcollision', function() {
     this.match = 1
-    this.same = funcion() {
+    this.same = function() {
         return this.match;
     }
 
