@@ -108,3 +108,9 @@ body {
 	display: block;
   padding-top:5px;
 }
+
+.expanded{
+  z-index:1;
+  width:80%;
+  height:80%;
+}

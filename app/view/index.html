@@ -21,7 +21,7 @@
     <div class="pure-g">
       <div class="item pure-u-1" id="vis_container" ng-controller="Visualization">
       </div>
-      <div class="item pure-u-1 pure-u-lg-1-2">
+      <div id="reminder_box" class="item pure-u-1 pure-u-lg-1-2">
         <div class="box_item" ng-controller="Reminder">
           <div class="boxname">
             My Reminders
@@ -29,7 +29,7 @@
               <i onclick="document.getElementById('alert_search').setAttribute('style', '');" class="fa fa-search" aria-hidden="true">
               </i>
               <div class="spacer"></div>
-              <i onclick="alert('expand');" class="fa fa-expand" aria-hidden="true"></i>
+              <i onclick="document.getElementById('reminder_box').setAttribute('class', 'expanded');" class="fa fa-expand" aria-hidden="true"></i>
             </div>
             <input placeholder="Search" class="box_search" id="alert_search" style="display:none;" type="text" ng-model="search"></input>
           </div>
