@@ -98,3 +98,12 @@ body {
   height:100px;
   width:100%
 }
+
+.right_buttons{
+  float:right;
+}
+
+.menu_buttons{
+  padding: 30px;
+  font-size: 2em;
+}
