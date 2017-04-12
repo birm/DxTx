@@ -221,3 +221,11 @@ mouseG.append('svg:rect') // append a rect to catch mouse movements on canvas
         return "translate(" + mouse[0] + "," + pos.y +")";
       });
   });
+
+
+// make it responsive please
+d3.select(window)
+  .on("resize", function() {
+    var targetWidth = svg.node().getBoundingClientRect().width;
+    svg.attr("width", targetWidth);
+});
