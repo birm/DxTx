@@ -85,6 +85,10 @@ module.service('ReminderService', function() {
   this.reminders = function() {
     return this.reminders
   }
+
+  this.reminder_search = function(search) {
+    return this.reminders
+  }
 });
 
 
@@ -107,6 +111,21 @@ module.service('LoginService', function() {
 });
 
 
+module.service('MetricService', function() {
+  this.metric_list = [{
+    metric:"Flu",
+    status:"5% (-5.1%)"
+  }];
+  this.metric_search = function(search){
+    return this.metric_list;
+  }
+
+  this.metrics = function() {
+    return this.metric_list;
+  }
+});
+
+
 module.service('mypatients', function() {
   this.patientlist = [{
     id: 1,
@@ -122,7 +141,7 @@ module.service('mypatients', function() {
       }
     ]
   }];
-  this.patient_search = function(name, dob){
+  this.patient_search = function(search){
     return this.patientlist;
   }
 

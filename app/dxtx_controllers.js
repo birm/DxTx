@@ -41,9 +41,13 @@ module.controller("Login", ['$scope', 'LoginService'], function($scope, LoginSer
 
 module.controller("Patients", ['$scope', 'mypatients', function($scope, mypatients) {
   $scope.patients = mypatients.patients();
-  $scope.patient_search = mypatients.patient_search($scope.s_name, $scope.s_dob);
+  $scope.patient_search = mypatients.patient_search($scope.search);
 }]);
 
+module.controller("Metrics", ['$scope', 'MetricService', function($scope, MetricService) {
+  $scope.metrics = MetricService.metrics();
+  $scope.patient_search = MetricService.metric_search($scope.search);
+}]);
 
 module.controller("PatientCreate", ['$scope', 'patientcollision', function($scope, patientcollision) {
   $scope.others = patientcollision.same
