@@ -1,115 +1,92 @@
 body {
     background-color: #FFFDFD;
 }
-
-.pure-menu-horizontal{
-  height: 75px;
+.pure-menu-horizontal {
+    height: 75px;
 }
-
 .pure-menu {
-    box-shadow: 0 3px 3px rgba(0,0,0, 0.50);
+    box-shadow: 0 3px 3px rgba(0, 0, 0, 0.50);
 }
-
-.logo{
+.logo {
     height: 60px;
 }
-
-.grid_container{
-  max-width: 1200px;
-  margin: 0 auto;
+.grid_container {
+    max-width: 1200px;
+    margin: 0 auto;
 }
-
-.vis_container{
-  margin: 0 auto;
-  height: 10%;
-  min-height:25px;
-  text-align: center;
-  margin: 10px;
-  padding: 0px 15px 0px 15px;
+.vis_container {
+    margin: 0 auto;
+    height: 10%;
+    min-height: 25px;
+    text-align: center;
+    margin: 10px;
+    padding: 0px 15px 0px 15px;
 }
-
-.boxname{
+.boxname {
     background-color: #DF2935;
     margin: 0px 10px 0px 10px;
     padding: 0px 15px 0px 15px;
 }
-
 .box_content {
-  margin: 0px 10px 20px 10px;
-  height: 35%;
-  min-height: 200px;
-  overflow: auto;
-  padding: 0px 15px 0px 15px;
-  background-color: #CBD2D0;
+    margin: 0px 10px 20px 10px;
+    height: 35%;
+    min-height: 200px;
+    overflow: auto;
+    padding: 0px 15px 0px 15px;
+    background-color: #CBD2D0;
 }
-
-.boxname{
+.boxname {
     text-align: center;
     font-size: 2em
 }
-
-.card-item{
+.card-item {
     margin: 5px 0px 5px 0px;
 }
-
 .card-item:nth-of-type(odd) {
-	background: #eee;
-	}
-
+    background: #eee;
+}
 .card-item:nth-of-type(even) {
-	background: #ddd;
-	}
-
+    background: #ddd;
+}
 .form-q:nth-of-type(odd) {
-	background: #eee;
-	}
-
+    background: #eee;
+}
 .form-q:nth-of-type(even) {
-	background: #ddd;
-	}
-
-td{
-    width:50%
+    background: #ddd;
 }
-
-
+td {
+    width: 50%
+}
 body {
-  font: 10px sans-serif;
+    font: 10px sans-serif;
 }
-
 .axis path,
 .axis line {
-  fill: none;
-  stroke: #000;
-  shape-rendering: crispEdges;
+    fill: none;
+    stroke: #000;
+    shape-rendering: crispEdges;
 }
-
 .x.axis path {
-  display: none;
+    display: none;
 }
-
 .line {
-  fill: none;
-  stroke: steelblue;
-  stroke-width: 1.5px;
+    fill: none;
+    stroke: steelblue;
+    stroke-width: 1.5px;
 }
-
-#vis_container{
-  height:100px;
-  width:100%
+#vis_container {
+    height: 100px;
+    width: 100%
 }
-
-.right_buttons{
-  float:right;
+.right_buttons {
+    float: right;
 }
-
-.menu_buttons{
-  padding: 30px;
-  font-size: 2em;
+.menu_buttons {
+    padding: 30px;
+    font-size: 2em;
 }
-
-.spacer{
-    width:5px;
-    height:auto;
-    display:inline-block;
+.spacer {
+    width: 5px;
+    height: auto;
+    display: inline-block;
 }
