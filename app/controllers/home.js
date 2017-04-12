@@ -26,7 +26,6 @@ module.service('ReminderService', function() {
     this.reminders = function() {
         return this.reminders
     }
-    this.
 });
 
 module.controller("ExpandItem", ['$scope'], function($scope) {
