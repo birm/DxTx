@@ -17,16 +17,8 @@ module.controller("Charts", ['$scope', 'ChartService', function($scope, ChartSer
 
 }]);
 
-module.controller("Home", ['$scope', function($scope) {
-    []
-}]);
-
 module.controller("Reminder", ['$scope', 'ReminderService',  function($scope, ReminderService) {
-    []
-}]);
-
-module.controller("ExpandItem", ['$scope', function($scope) {
-    []
+    $scope.reminder_search = ReminderService.reminder_search($scope.search);
 }]);
 
 module.controller("Info", ['$scope', 'WeatherService', function($scope, WeatherService) {
@@ -46,7 +38,7 @@ module.controller("Patients", ['$scope', 'mypatients', function($scope, mypatien
 
 module.controller("Metrics", ['$scope', 'MetricService', function($scope, MetricService) {
   $scope.metrics = MetricService.metrics();
-  $scope.patient_search = MetricService.metric_search($scope.search);
+  $scope.metric_search = MetricService.metric_search($scope.search);
 }]);
 
 module.controller("PatientCreate", ['$scope', 'patientcollision', function($scope, patientcollision) {
