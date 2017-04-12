@@ -27,6 +27,13 @@ body {
     margin: 0px 10px 0px 10px;
     padding: 0px 15px 0px 15px;
 }
+
+.box_search{
+    width:96.75%;
+    margin: 0px 10px 0px 10px;
+    font-size: 2em;
+}
+
 .box_content {
     margin: 0px 10px 20px 10px;
     height: 35%;
