@@ -107,3 +107,9 @@ body {
   padding: 30px;
   font-size: 2em;
 }
+
+.spacer{
+    width:5px;
+    height:auto;
+    display:inline-block;
+}
