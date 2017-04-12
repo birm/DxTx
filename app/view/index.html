@@ -29,7 +29,7 @@
               <i onclick="document.getElementById('alert_search').setAttribute('style', '');" class="fa fa-search" aria-hidden="true">
               </i>
               <div class="spacer"></div>
-              <i onclick="document.getElementById('reminder_box').setAttribute('class', 'expanded pure-u-1');" class="fa fa-expand" aria-hidden="true"></i>
+              <i onclick="if(document.getElementById('reminder_box').getAttribute('class').includes('expanded')){document.getElementById('reminder_box').setAttribute('class', 'item pure-u-1 pure-u-lg-1-2')}else{document.getElementById('reminder_box').setAttribute('class', 'expanded pure-u-1')};" class="fa fa-expand" aria-hidden="true"></i>
             </div>
             <input placeholder="Search" class="box_search" id="alert_search" style="display:none;" type="text" ng-model="search"></input>
           </div>
