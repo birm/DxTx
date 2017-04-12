@@ -30,13 +30,14 @@
                     <div class="boxname">
                       My Reminders
                       <div class="right_buttons">
-                        <i onclick="alert('search');" class="fa fa-search" aria-hidden="true">
+                        <i onclick="document.getElementById('alert_search').setAttribute('style', 'width:100%');" class="fa fa-search" aria-hidden="true">
                         </i>
                         <div class="spacer"></div>
                         <i onclick="alert('expand');" class="fa fa-expand" aria-hidden="true"></i>
                       </div>
                     </div>
                     <div class="box_content">
+                      <input id="alert_search" style="display:none;" type="text" ng-model="search"></input>
                         <table width="100%" class="card-item pure-table pure-table-bordered">
                             <tbody>
                                 <tr>
@@ -141,13 +142,15 @@
                     <div class="boxname">
                       My Metrics
                       <div class="right_buttons">
-                        <i class="fa fa-search" aria-hidden="true">
+                        <i onclick="document.getElementById('metric_search').setAttribute('style', 'width:100%');"
+                        class="fa fa-search" aria-hidden="true">
                         </i>
                         <div class="spacer"></div>
                         <i class="fa fa-expand" aria-hidden="true"></i>
                       </div>
                     </div>
                     <div class="box_content">
+                      <input id="metric_search" style="display:none;" type="text" ng-model="search"></input>
                         <table width="100%" class="card-item pure-table pure-table-bordered">
                             <tbody>
                                 <tr>
@@ -180,13 +183,15 @@
                     <div class="boxname">
                       My Patients
                       <div class="right_buttons">
-                        <i class="fa fa-search" aria-hidden="true">
+                        <i onclick="document.getElementById('patient_search').setAttribute('style', 'width:100%');"
+ class="fa fa-search" aria-hidden="true">
                         </i>
                         <div class="spacer"></div>
                         <i class="fa fa-expand" aria-hidden="true"></i>
                       </div>
                     </div>
                     <div class="box_content">
+                      <input id="patient_search" style="display:none;" type="text" ng-model="search"></input>
                         <table width="100%" class="card-item pure-table pure-table-bordered">
                             <tbody>
                                 <tr>
@@ -291,13 +296,15 @@
                     <div class="boxname">
                       My Charts
                       <div class="right_buttons">
-                        <i class="fa fa-search" aria-hidden="true">
+                        <i onclick="document.getElementById('chart_search').setAttribute('style', 'width:100%');"
+                        class="fa fa-search" aria-hidden="true">
                         </i>
                         <div class="spacer"></div>
                         <i class="fa fa-expand" aria-hidden="true"></i>
                       </div>
                     </div>
                     <div class="box_content">
+                      <input id="chart_search" style="display:none;" type="text" ng-model="search"></input>
                         <table width="100%" class="card-item pure-table pure-table-bordered">
                             <tbody>
                                 <tr>
