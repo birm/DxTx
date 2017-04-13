@@ -34,6 +34,7 @@ module.service('ChartService', function() {
   this.chartlist = [{
     id: 1,
     title: "basic test intake",
+    modified: "1/10/2017",
     questions: [{
         text: "How do you feel today?",
         type: "paragraph",
@@ -59,6 +60,7 @@ module.service('ChartService', function() {
   {
     id: 2,
     title: "Feedback",
+    modified: "1/10/2017",
     questions: [{
         text: "How was your visit?",
         type: "paragraph",
