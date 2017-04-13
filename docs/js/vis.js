@@ -39,7 +39,7 @@ function ready(err, data) {
 
 	//FORMAT data
 	data.forEach(function(d) {
-		d.num = +Math.floor(Math.random()*10);
+		d.num = +Math.floor(Math.random()*100);
     d.date = parseDate(d.date);
 	});
 
