@@ -1,7 +1,7 @@
 var margin = {top: 20, right: 20, bottom: 20, left: 20};
 
 
-var width = window.outerWidth - margin.left - margin.right,
+var width = window.outerWidth*0.9 - margin.left - margin.right,
     height = 40
 
 //Parses date for correct time format
@@ -39,7 +39,7 @@ function ready(err, data) {
 
 	//FORMAT data
 	data.forEach(function(d) {
-		d.num = +d.num;
+		d.num = +Math.floor(Math.random()*10);
     d.date = parseDate(d.date);
 	});
 
@@ -92,8 +92,6 @@ function ready(err, data) {
     focus.select("text").text(d.num);
   };
 
-
-
   //RESPONSIVENESS
   d3.select(window).on("resize", resized);
 
@@ -125,14 +123,5 @@ function ready(err, data) {
 
 }
 
-//Determines number of ticks base on width
-function numTicks(widther) {
-  if (widther <= 900) {
-    return 4
-    console.log("return 4")
-  }
-  else {
-    return 12
-    console.log("return 5")
-  }
-}
+// initial scale
+d3.select("svg").attr("width", d3.select(".g-chart").node().clientWidth);
