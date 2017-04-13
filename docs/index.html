@@ -74,7 +74,7 @@
 
 
       <div id="metrics_modal" class="item pure-u-1 modal">
-        <div class="modal_content">
+        <div class="modal_content" ng-controller="Metrics">
           <div class="boxname">
             My Metrics
             <div class="right_buttons">
@@ -99,7 +99,7 @@
 
 
       <div class="item pure-u-1 pure-u-lg-1-2">
-        <div class="box_item">
+        <div class="box_item" ng-controller="Metrics">
           <div class="boxname">
             My Metrics
             <div class="right_buttons">
@@ -185,11 +185,11 @@
           </div>
             </div>
           <div class="box_content">
-            <table width="100%" class="card-item pure-table pure-table-bordered" ng-repeat"chart in charts">
+            <table width="100%" class="card-item pure-table pure-table-bordered" ng-repeat="chart in charts">
               <tbody>
                 <tr>
                   <td>{{chart.title}}</td>
-                  <td>{{chart.questions}}</td>
+                  <td>{{chart.questions.toString()}}</td>
                 </tr>
               </tbody>
             </table>
@@ -211,7 +211,7 @@
           </div>
             </div>
           <div class="box_content">
-            <table width="100%" class="card-item pure-table pure-table-bordered" ng-repeat"chart in charts">
+            <table width="100%" class="card-item pure-table pure-table-bordered" ng-repeat="chart in charts">
               <tbody>
                 <tr>
                   <td>{{chart.title}}</td>
