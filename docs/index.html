@@ -7,9 +7,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href=" https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="basic.css">
+    <link rel="stylesheet" href="vis.css">
     <link rel="stylesheet" href="https://unpkg.com/purecss@0.6.2/build/pure-min.css" integrity="sha384-" crossorigin="anonymous">
     <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.6.0/grids-responsive-min.css">
-    <script data-require="d3@3.5.3" data-semver="3.5.3" src="http://cdnjs.cloudflare.com/ajax/libs/d3/3.5.3/d3.js"></script>
+    <script src="http://d3js.org/d3.v3.min.js"></script>
     <div class="pure-menu pure-menu-horizontal">
       <a href="#" class="logo_bar">
       <img class="logo" src="dxtx.png" alt="DxTx" />
@@ -20,7 +21,11 @@
     <div class="grid_container">
     <div class="pure-g">
       <div class="item pure-u-1" id="vis_container" ng-controller="Visualization">
+        <div class="g-chart"></div>
+          <div class="g-source"><span class="g-source-bold"></span><span class="g-source-reg"></span></div>
+        </div>
       </div>
+    </div>
 
 
       <div id="reminder_modal" class="item pure-u-1 modal">
