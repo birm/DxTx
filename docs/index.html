@@ -2,8 +2,8 @@
   <head>
     <title>DxTx - Diagnosis Treatment</title>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
-    <script src="dxtx_controllers.js"></script>
-    <script src="dxtx_services.js"></script>
+    <script src="js/dxtx_controllers.js"></script>
+    <script src="js/dxtx_services.js"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href=" https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="basic.css">
@@ -34,99 +34,11 @@
             <input placeholder="Search" class="box_search" id="alert_search" type="text" ng-model="search"></input>
           </div>
           <div class="modal_box_content">
-            <table width="100%" class="card-item pure-table pure-table-bordered">
+            <table ng-repeat="reminder in reminders" width="100%" class="card-item pure-table pure-table-bordered">
               <tbody>
                 <tr>
-                  <td>Add new Physicians</td>
-                  <td>Due: 10/1/2017</td>
-                </tr>
-              </tbody>
-            </table>
-            <table width="100%" class="card-item pure-table pure-table-bordered">
-              <tbody>
-                <tr>
-                  <td>Add new Patients</td>
-                  <td>Due: 10/16/2017</td>
-                </tr>
-              </tbody>
-            </table>
-            <table width="100%" class="card-item pure-table pure-table-bordered">
-              <tbody>
-                <tr>
-                  <td>Add new Metrics</td>
-                  <td>Due: 10/1/2017</td>
-                </tr>
-              </tbody>
-            </table>
-            <table width="100%" class="card-item pure-table pure-table-bordered">
-              <tbody>
-                <tr>
-                  <td>Add new Physicians</td>
-                  <td>Due: 10/1/2017</td>
-                </tr>
-              </tbody>
-            </table>
-            <table width="100%" class="card-item pure-table pure-table-bordered">
-              <tbody>
-                <tr>
-                  <td>Add new Patients</td>
-                  <td>Due: 10/16/2017</td>
-                </tr>
-              </tbody>
-            </table>
-            <table width="100%" class="card-item pure-table pure-table-bordered">
-              <tbody>
-                <tr>
-                  <td>Add new Metrics</td>
-                  <td>Due: 10/1/2017</td>
-                </tr>
-              </tbody>
-            </table>
-            <table width="100%" class="card-item pure-table pure-table-bordered">
-              <tbody>
-                <tr>
-                  <td>Add new Physicians</td>
-                  <td>Due: 10/1/2017</td>
-                </tr>
-              </tbody>
-            </table>
-            <table width="100%" class="card-item pure-table pure-table-bordered">
-              <tbody>
-                <tr>
-                  <td>Add new Patients</td>
-                  <td>Due: 10/16/2017</td>
-                </tr>
-              </tbody>
-            </table>
-            <table width="100%" class="card-item pure-table pure-table-bordered">
-              <tbody>
-                <tr>
-                  <td>Add new Metrics</td>
-                  <td>Due: 10/1/2017</td>
-                </tr>
-              </tbody>
-            </table>
-            <table width="100%" class="card-item pure-table pure-table-bordered">
-              <tbody>
-                <tr>
-                  <td>Add new Physicians</td>
-                  <td>Due: 10/1/2017</td>
-                </tr>
-              </tbody>
-            </table>
-            <table width="100%" class="card-item pure-table pure-table-bordered">
-              <tbody>
-                <tr>
-                  <td>Add new Patients</td>
-                  <td>Due: 10/16/2017</td>
-                </tr>
-              </tbody>
-            </table>
-            <table width="100%" class="card-item pure-table pure-table-bordered">
-              <tbody>
-                <tr>
-                  <td>Add new Metrics</td>
-                  <td>Due: 10/1/2017</td>
+                  <td>{{reminder.heading}}</td>
+                  <td>Due: {{reminder.due}}</td>
                 </tr>
               </tbody>
             </table>
@@ -135,7 +47,7 @@
       </div>
 
 
-      <div id="reminder_box" class="item pure-u-1 pure-u-lg-1-2">
+      <div id="reminder_box" class="item pure-u-1 pure-u-md-1-2">
         <div class="box_item" ng-controller="Reminder">
           <div class="boxname">
             My Reminders
@@ -146,99 +58,11 @@
             <input placeholder="Search" class="box_search" id="alert_search" type="text" ng-model="search"></input>
           </div>
           <div class="box_content">
-            <table width="100%" class="card-item pure-table pure-table-bordered">
+            <table ng-repeat="reminder in reminders" width="100%" class="card-item pure-table pure-table-bordered">
               <tbody>
                 <tr>
-                  <td>Add new Physicians</td>
-                  <td>Due: 10/1/2017</td>
-                </tr>
-              </tbody>
-            </table>
-            <table width="100%" class="card-item pure-table pure-table-bordered">
-              <tbody>
-                <tr>
-                  <td>Add new Patients</td>
-                  <td>Due: 10/16/2017</td>
-                </tr>
-              </tbody>
-            </table>
-            <table width="100%" class="card-item pure-table pure-table-bordered">
-              <tbody>
-                <tr>
-                  <td>Add new Metrics</td>
-                  <td>Due: 10/1/2017</td>
-                </tr>
-              </tbody>
-            </table>
-            <table width="100%" class="card-item pure-table pure-table-bordered">
-              <tbody>
-                <tr>
-                  <td>Add new Physicians</td>
-                  <td>Due: 10/1/2017</td>
-                </tr>
-              </tbody>
-            </table>
-            <table width="100%" class="card-item pure-table pure-table-bordered">
-              <tbody>
-                <tr>
-                  <td>Add new Patients</td>
-                  <td>Due: 10/16/2017</td>
-                </tr>
-              </tbody>
-            </table>
-            <table width="100%" class="card-item pure-table pure-table-bordered">
-              <tbody>
-                <tr>
-                  <td>Add new Metrics</td>
-                  <td>Due: 10/1/2017</td>
-                </tr>
-              </tbody>
-            </table>
-            <table width="100%" class="card-item pure-table pure-table-bordered">
-              <tbody>
-                <tr>
-                  <td>Add new Physicians</td>
-                  <td>Due: 10/1/2017</td>
-                </tr>
-              </tbody>
-            </table>
-            <table width="100%" class="card-item pure-table pure-table-bordered">
-              <tbody>
-                <tr>
-                  <td>Add new Patients</td>
-                  <td>Due: 10/16/2017</td>
-                </tr>
-              </tbody>
-            </table>
-            <table width="100%" class="card-item pure-table pure-table-bordered">
-              <tbody>
-                <tr>
-                  <td>Add new Metrics</td>
-                  <td>Due: 10/1/2017</td>
-                </tr>
-              </tbody>
-            </table>
-            <table width="100%" class="card-item pure-table pure-table-bordered">
-              <tbody>
-                <tr>
-                  <td>Add new Physicians</td>
-                  <td>Due: 10/1/2017</td>
-                </tr>
-              </tbody>
-            </table>
-            <table width="100%" class="card-item pure-table pure-table-bordered">
-              <tbody>
-                <tr>
-                  <td>Add new Patients</td>
-                  <td>Due: 10/16/2017</td>
-                </tr>
-              </tbody>
-            </table>
-            <table width="100%" class="card-item pure-table pure-table-bordered">
-              <tbody>
-                <tr>
-                  <td>Add new Metrics</td>
-                  <td>Due: 10/1/2017</td>
+                  <td>{{reminder.heading}}</td>
+                  <td>Due: {{reminder.due}}</td>
                 </tr>
               </tbody>
             </table>
@@ -248,7 +72,7 @@
 
 
       <div id="metrics_modal" class="item pure-u-1 modal">
-        <div class="modal_content">
+        <div class="modal_content" ng-controller="Metrics">
           <div class="boxname">
             My Metrics
             <div class="right_buttons">
@@ -258,27 +82,11 @@
             <input placeholder="Search" class="box_search" id="metric_search" type="text" ng-model="search"></input>
           </div>
           <div class="modal_box_content">
-            <table width="100%" class="card-item pure-table pure-table-bordered">
+            <table ng-repeat="metric in metrics" width="100%" class="card-item pure-table pure-table-bordered">
               <tbody>
                 <tr>
-                  <td>Punctuality</td>
-                  <td>75% (+0.5%)</td>
-                </tr>
-              </tbody>
-            </table>
-            <table width="100%" class="card-item pure-table pure-table-bordered">
-              <tbody>
-                <tr>
-                  <td>Kindness</td>
-                  <td>85% (+5.5%)</td>
-                </tr>
-              </tbody>
-            </table>
-            <table width="100%" class="card-item pure-table pure-table-bordered">
-              <tbody>
-                <tr>
-                  <td>Flu Rate</td>
-                  <td>5% (-5.1%)</td>
+                  <td>{{metric.metric}}</td>
+                  <td>{{metric.status}}</td>
                 </tr>
               </tbody>
             </table>
@@ -287,8 +95,8 @@
       </div>
 
 
-      <div class="item pure-u-1 pure-u-lg-1-2">
-        <div class="box_item">
+      <div class="item pure-u-1 pure-u-md-1-2">
+        <div class="box_item" ng-controller="Metrics">
           <div class="boxname">
             My Metrics
             <div class="right_buttons">
@@ -298,27 +106,11 @@
             <input placeholder="Search" class="box_search" id="metric_search" type="text" ng-model="search"></input>
           </div>
           <div class="box_content">
-            <table width="100%" class="card-item pure-table pure-table-bordered">
+            <table ng-repeat="metric in metrics" width="100%" class="card-item pure-table pure-table-bordered">
               <tbody>
                 <tr>
-                  <td>Punctuality</td>
-                  <td>75% (+0.5%)</td>
-                </tr>
-              </tbody>
-            </table>
-            <table width="100%" class="card-item pure-table pure-table-bordered">
-              <tbody>
-                <tr>
-                  <td>Kindness</td>
-                  <td>85% (+5.5%)</td>
-                </tr>
-              </tbody>
-            </table>
-            <table width="100%" class="card-item pure-table pure-table-bordered">
-              <tbody>
-                <tr>
-                  <td>Flu Rate</td>
-                  <td>5% (-5.1%)</td>
+                  <td>{{metric.metric}}</td>
+                  <td>{{metric.status}}</td>
                 </tr>
               </tbody>
             </table>
@@ -327,7 +119,7 @@
       </div>
 
 
-      <div class="item pure-u-1 pure-u-lg-1-2">
+      <div class="item pure-u-1 pure-u-md-1-2">
         <div class="box_item" ng-controller="Patients">
           <div class="boxname">
             My Patients
@@ -338,99 +130,11 @@
             <input placeholder="Search" class="box_search" id="patient_search" type="text" ng-model="search"></input>
           </div>
           <div class="box_content">
-            <table width="100%" class="card-item pure-table pure-table-bordered">
+            <table ng-repeat="patient in patients" width="100%" class="card-item pure-table pure-table-bordered">
               <tbody>
                 <tr>
-                  <td>Alice Alices</td>
-                  <td>Due: 10/10/2017</td>
-                </tr>
-              </tbody>
-            </table>
-            <table width="100%" class="card-item pure-table pure-table-bordered">
-              <tbody>
-                <tr>
-                  <td>Bob Bobs</td>
-                  <td>Due: 10/10/2017</td>
-                </tr>
-              </tbody>
-            </table>
-            <table width="100%" class="card-item pure-table pure-table-bordered">
-              <tbody>
-                <tr>
-                  <td>Cat Person</td>
-                  <td>Due: 10/10/2017</td>
-                </tr>
-              </tbody>
-            </table>
-            <table width="100%" class="card-item pure-table pure-table-bordered">
-              <tbody>
-                <tr>
-                  <td>Alice Alices</td>
-                  <td>Due: 10/10/2017</td>
-                </tr>
-              </tbody>
-            </table>
-            <table width="100%" class="card-item pure-table pure-table-bordered">
-              <tbody>
-                <tr>
-                  <td>Bob Bobs</td>
-                  <td>Due: 10/10/2017</td>
-                </tr>
-              </tbody>
-            </table>
-            <table width="100%" class="card-item pure-table pure-table-bordered">
-              <tbody>
-                <tr>
-                  <td>Cat Person</td>
-                  <td>Due: 10/10/2017</td>
-                </tr>
-              </tbody>
-            </table>
-            <table width="100%" class="card-item pure-table pure-table-bordered">
-              <tbody>
-                <tr>
-                  <td>Alice Alices</td>
-                  <td>Due: 10/10/2017</td>
-                </tr>
-              </tbody>
-            </table>
-            <table width="100%" class="card-item pure-table pure-table-bordered">
-              <tbody>
-                <tr>
-                  <td>Bob Bobs</td>
-                  <td>Due: 10/10/2017</td>
-                </tr>
-              </tbody>
-            </table>
-            <table width="100%" class="card-item pure-table pure-table-bordered">
-              <tbody>
-                <tr>
-                  <td>Cat Person</td>
-                  <td>Due: 10/10/2017</td>
-                </tr>
-              </tbody>
-            </table>
-            <table width="100%" class="card-item pure-table pure-table-bordered">
-              <tbody>
-                <tr>
-                  <td>Alice Alices</td>
-                  <td>Due: 10/10/2017</td>
-                </tr>
-              </tbody>
-            </table>
-            <table width="100%" class="card-item pure-table pure-table-bordered">
-              <tbody>
-                <tr>
-                  <td>Bob Bobs</td>
-                  <td>Due: 10/10/2017</td>
-                </tr>
-              </tbody>
-            </table>
-            <table width="100%" class="card-item pure-table pure-table-bordered">
-              <tbody>
-                <tr>
-                  <td>Cat Person</td>
-                  <td>Due: 10/10/2017</td>
+                  <td>{{patient.name}}</td>
+                  <td>{{patient.DOB}}</td>
                 </tr>
               </tbody>
             </table>
@@ -450,99 +154,11 @@
             <input placeholder="Search" class="box_search" id="patient_search" type="text" ng-model="search"></input>
           </div>
           <div class="box_content">
-            <table width="100%" class="card-item pure-table pure-table-bordered">
+            <table ng-repeat="patient in patients" width="100%" class="card-item pure-table pure-table-bordered">
               <tbody>
                 <tr>
-                  <td>Alice Alices</td>
-                  <td>Due: 10/10/2017</td>
-                </tr>
-              </tbody>
-            </table>
-            <table width="100%" class="card-item pure-table pure-table-bordered">
-              <tbody>
-                <tr>
-                  <td>Bob Bobs</td>
-                  <td>Due: 10/10/2017</td>
-                </tr>
-              </tbody>
-            </table>
-            <table width="100%" class="card-item pure-table pure-table-bordered">
-              <tbody>
-                <tr>
-                  <td>Cat Person</td>
-                  <td>Due: 10/10/2017</td>
-                </tr>
-              </tbody>
-            </table>
-            <table width="100%" class="card-item pure-table pure-table-bordered">
-              <tbody>
-                <tr>
-                  <td>Alice Alices</td>
-                  <td>Due: 10/10/2017</td>
-                </tr>
-              </tbody>
-            </table>
-            <table width="100%" class="card-item pure-table pure-table-bordered">
-              <tbody>
-                <tr>
-                  <td>Bob Bobs</td>
-                  <td>Due: 10/10/2017</td>
-                </tr>
-              </tbody>
-            </table>
-            <table width="100%" class="card-item pure-table pure-table-bordered">
-              <tbody>
-                <tr>
-                  <td>Cat Person</td>
-                  <td>Due: 10/10/2017</td>
-                </tr>
-              </tbody>
-            </table>
-            <table width="100%" class="card-item pure-table pure-table-bordered">
-              <tbody>
-                <tr>
-                  <td>Alice Alices</td>
-                  <td>Due: 10/10/2017</td>
-                </tr>
-              </tbody>
-            </table>
-            <table width="100%" class="card-item pure-table pure-table-bordered">
-              <tbody>
-                <tr>
-                  <td>Bob Bobs</td>
-                  <td>Due: 10/10/2017</td>
-                </tr>
-              </tbody>
-            </table>
-            <table width="100%" class="card-item pure-table pure-table-bordered">
-              <tbody>
-                <tr>
-                  <td>Cat Person</td>
-                  <td>Due: 10/10/2017</td>
-                </tr>
-              </tbody>
-            </table>
-            <table width="100%" class="card-item pure-table pure-table-bordered">
-              <tbody>
-                <tr>
-                  <td>Alice Alices</td>
-                  <td>Due: 10/10/2017</td>
-                </tr>
-              </tbody>
-            </table>
-            <table width="100%" class="card-item pure-table pure-table-bordered">
-              <tbody>
-                <tr>
-                  <td>Bob Bobs</td>
-                  <td>Due: 10/10/2017</td>
-                </tr>
-              </tbody>
-            </table>
-            <table width="100%" class="card-item pure-table pure-table-bordered">
-              <tbody>
-                <tr>
-                  <td>Cat Person</td>
-                  <td>Due: 10/10/2017</td>
+                  <td>{{patient.name}}</td>
+                  <td>{{patient.DOB}}</td>
                 </tr>
               </tbody>
             </table>
@@ -551,7 +167,7 @@
       </div>
 
 
-      <div class="item pure-u-1 pure-u-lg-1-2">
+      <div class="item pure-u-1 pure-u-md-1-2">
         <div class="box_item" ng-controller="Charts">
           <div class="boxname">
             My Charts
@@ -561,38 +177,19 @@
             </div>
             <input placeholder="Search" class="box_search" id="chart_search" type="text" ng-model="search"></input>
           </div>
-            </div>
           <div class="box_content">
-            <table width="100%" class="card-item pure-table pure-table-bordered">
+            <table ng-repeat="chart in charts" width="100%" class="card-item pure-table pure-table-bordered">
               <tbody>
                 <tr>
-                  <td>Intake</td>
-                  <td>Modified: 04/04/2017</td>
+                  <td>{{chart.title}}</td>
+                  <td>{{chart.modified}}</td>
                 </tr>
               </tbody>
-            </table>
-            <table width="100%" class="card-item pure-table pure-table-bordered">
-              <tbody>
-                <tr>
-                  <td>Diagnosis</td>
-                  <td>Modified: 04/04/2017</td>
-                </tr>
-              </tbody>
-            </table>
-            <table width="100%" class="card-item pure-table pure-table-bordered">
-              <tbody>
-                <tr>
-                  <td>Feedback</td>
-                  <td>Modified: 04/04/2017</td>
-                </tr>
-              </tbody>
-            </table>
-            </tr>
-            </tbody>
             </table>
           </div>
         </div>
       </div>
+
 
       <div id="charts_modal" class="item pure-u-1 modal">
         <div class="modal_content" ng-controller="Charts">
@@ -604,43 +201,25 @@
             </div>
             <input placeholder="Search" class="box_search" id="chart_search" type="text" ng-model="search"></input>
           </div>
-            </div>
           <div class="box_content">
-            <table width="100%" class="card-item pure-table pure-table-bordered">
+            <table ng-repeat="chart in charts" width="100%" class="card-item pure-table pure-table-bordered">
               <tbody>
                 <tr>
-                  <td>Intake</td>
-                  <td>Modified: 04/04/2017</td>
+                  <td>{{chart.title}}</td>
+                  <td>{{chart.modified}}</td>
                 </tr>
               </tbody>
-            </table>
-            <table width="100%" class="card-item pure-table pure-table-bordered">
-              <tbody>
-                <tr>
-                  <td>Diagnosis</td>
-                  <td>Modified: 04/04/2017</td>
-                </tr>
-              </tbody>
-            </table>
-            <table width="100%" class="card-item pure-table pure-table-bordered">
-              <tbody>
-                <tr>
-                  <td>Feedback</td>
-                  <td>Modified: 04/04/2017</td>
-                </tr>
-              </tbody>
-            </table>
-            </tr>
-            </tbody>
             </table>
           </div>
         </div>
       </div>
+
+
     </div>
   </body>
   <footer>
     footer - thick
   </footer>
-  <script src="vis.js"></script>
-  <script src="modal.js"></script>
+  <script src="js/vis.js"></script>
+  <script src="js/modal.js"></script>
 </html>

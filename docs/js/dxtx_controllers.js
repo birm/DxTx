@@ -19,6 +19,7 @@ module.controller("Charts", ['$scope', 'ChartService', function($scope, ChartSer
 
 module.controller("Reminder", ['$scope', 'ReminderService',  function($scope, ReminderService) {
     $scope.reminder_search = ReminderService.reminder_search($scope.search);
+    $scope.reminders = ReminderService.reminders()
 }]);
 
 module.controller("Info", ['$scope', 'WeatherService', function($scope, WeatherService) {

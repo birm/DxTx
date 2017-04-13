@@ -31,9 +31,10 @@ module.service('ChartViewService', function() {
 });
 
 module.service('ChartService', function() {
-  this.data = [{
+  this.chartlist = [{
     id: 1,
     title: "basic test intake",
+    modified: "1/10/2017",
     questions: [{
         text: "How do you feel today?",
         type: "paragraph",
@@ -55,19 +56,45 @@ module.service('ChartService', function() {
         level: "edit"
       }
     ]
-  }]
+  },
+  {
+    id: 2,
+    title: "Feedback",
+    modified: "1/10/2017",
+    questions: [{
+        text: "How was your visit?",
+        type: "paragraph",
+        answer: "Describe your visit in general terms."
+      },
+      {
+        text: "What recommendations do you have?",
+        type: "paragraph",
+        validation: ["nonempty"],
+        answer: "Describe what you would change."
+      }
+    ],
+    permissions: [{
+        user: 2,
+        level: "owner"
+      },
+      {
+        user: 1,
+        level: "edit"
+      }
+    ]
+  }];
 
   this.chart_search = function(search){
-    return this.data;
+    return this.chartlist;
   };
 
   this.charts = function() {
-    return this.data;
-  }
+    return this.chartlist;
+  };
 });
 
 module.service('ReminderService', function() {
-  this.reminders = [{
+  this.remind_list = [{
       id: 1,
       heading: "Add Physicians",
       text: "Need to add the Physicians to the app",
@@ -81,13 +108,14 @@ module.service('ReminderService', function() {
       due: "10/1/2017",
       owner: 2
     }
-  ]
+  ];
+
   this.reminders = function() {
-    return this.reminders
+    return this.remind_list;
   }
 
   this.reminder_search = function(search) {
-    return this.reminders
+    return this.remind_list;
   }
 });
 
@@ -115,6 +143,10 @@ module.service('MetricService', function() {
   this.metric_list = [{
     metric:"Flu",
     status:"5% (-5.1%)"
+  },
+  {
+    metric:"Kindness",
+    status:"80% (+3.8%)"
   }];
   this.metric_search = function(search){
     return this.metric_list;
